@@ -48,9 +48,9 @@ class FrameBasedAnimationDriver extends AnimationDriver {
       mToValue = 0;
     }
     if(config.hasKey("iterations")) {
-      mToValue = config.getType("iterations") == ReadableType.Number ? config.getInt("iterations") : 1;
+      mIterations = config.getType("iterations") == ReadableType.Number ? config.getInt("iterations") : 1;
     } else {
-      mToValue = 1;
+      mIterations = 1;
     }
     mCurrentLoop = 1;
     mHasFinished = mIterations == 0;
